@@ -1,3 +1,10 @@
+@use './colors' as color;
+@use './animations' as animations;
+@use './small' as small;
+@use './medium' as medium;
+@use './large' as large;
+
+
 body {
     font-family: "Cinzel", serif;
     font-family: "Raleway", sans-serif;
