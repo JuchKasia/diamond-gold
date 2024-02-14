@@ -16,4 +16,70 @@ body {
   font-size: 1.6rem;
   color: #fff;
   background-color: #232323;
+}
+
+.burger {
+  margin: 10px;
+  padding: 15px 15px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.8 ease-in-out;
+}
+.burger__box {
+  position: relative;
+  width: 40px;
+  height: 24px;
+  transition: transform 0.5s;
+  display: block;
+}
+.burger__box:hover {
+  transform: scale(1.1);
+}
+
+.burger:hover {
+  opacity: 0.7;
+}
+
+.burger.active:hover {
+  opacity: 0.7;
+}
+
+.burger__inner {
+  position: relative;
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.burger.active .burger__inner,
+.burger.active .burger__inner::before,
+.burger.active .burger__inner::after {
+  background-color: #000;
+}
+
+.burger__inner,
+.burger__inner::before,
+.burger__inner::after {
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border: none;
+  border-radius: 4px;
+  transition: all 2.5 ease-in-out;
+}
+
+.burger__inner::before,
+.burger__inner::after {
+  content: "";
+  display: block;
+}
+
+.burger__inner::before {
+  top: -10px;
+}
+
+.burger__inner::after {
+  bottom: -10px;
 }/*# sourceMappingURL=main.css.map */
