@@ -1,0 +1,145 @@
+@use './colors' as color;
+@use './animations' as animations;
+@use './small' as small;
+@use './medium' as medium;
+@use './large' as large;
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    // font-family: "Cinzel", serif;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+    color: color.$white;
+    background-color: color.$dark;
+}
+
+
+// button HAMBURGER
+.burger {
+    margin: 10px;
+    padding: 15px 15px;
+    border: 0;
+    // border: none; ??
+    background-color: transparent;
+    // overflow: visible;
+    cursor: pointer;
+    // border: 1px solid red;
+    transition: all 0.8 ease-in-out;
+    &__box {
+        position: relative;
+        width: 40px;
+        height: 24px;
+        // display: inline-block;
+        transition: transform 0.5s;
+        display: block;
+    }
+    &__box:hover {
+        transform: scale(1.1);
+    }
+}
+
+.burger:hover {
+    opacity: 0.7;
+}
+
+.burger.active:hover {
+    opacity: 0.7;
+}
+
+.burger__inner {
+    position: relative;
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+    // z-index: 15;
+}
+
+.burger.active .burger__inner,
+.burger.active .burger__inner::before,
+.burger.active .burger__inner::after {
+    background-color: #000;
+}
+
+.burger__inner, 
+.burger__inner::before, 
+.burger__inner::after {
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border: none;
+    border-radius: 4px;
+    transition: all 2.5 ease-in-out;
+}
+
+.burger__inner::before, 
+.burger__inner::after {
+    content: "";
+    display: block;
+}
+
+.burger__inner::before {
+    top: -10px;
+}
+
+.burger__inner::after {
+    bottom: -10px;
+}
+
+.burger--btn {
+    .burger__inner {
+        transition: transform 0.075s 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+         background-color 0s 0.075s linear;
+    }
+}
+
+
+.burger--btn .burger__inner::before {
+      transition: top 0.075s 0.075s ease-in,
+       transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.burger--btn .burger__inner::after {
+      transition: bottom 0.075s 0.075s ease-in,
+       transform 0.075s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.burger--btn.active {
+    .burger__inner {
+        transform: rotate(90deg);
+        background-color: transparent !important;
+        transition: transform 0.075s 0s cubic-bezier(0.215, 0.61, 0.355, 1),
+         background-color 0s 0.15s linear;
+    }
+}
+
+.burger--btn.active {
+    .burger__inner::before {
+        top: 0;
+        transform: rotate(-45deg);
+        transition: top 0.075s 0.1s ease-out,
+         transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+}
+
+.burger--btn.active  {
+    .burger__inner::after {
+        bottom: 0;
+        transform: rotate(45deg);
+        transition: bottom 0.075s 0.1s ease-out,
+         transform 0.075s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+}
