@@ -87,12 +87,14 @@ body {
     &__bg-icon-two {
         display: none;
     }
-
 }
 
 // button HAMBURGER
 .burger {
-    margin: 10px;
+    position: absolute;
+    top: 3em;
+    left: 1em;
+    // margin: 10px;
     padding: 15px 15px;
     border: 0;
     // border: none; ??
@@ -101,6 +103,8 @@ body {
     cursor: pointer;
     // border: 1px solid red;
     transition: all 0.8 ease-in-out;
+    transform: translateY(-50%);
+    z-index: 50;
     &__box {
         position: relative;
         width: 40px;
@@ -142,10 +146,11 @@ body {
     position: absolute;
     width: 40px;
     height: 4px;
-    background-color: #000;
+    background-color: color.$white;
     border: none;
     border-radius: 4px;
     transition: all 2.5 ease-in-out;
+    z-index: 50;
 }
 
 .burger__inner::before, 
