@@ -119,7 +119,7 @@ body {
 .burger.active .burger__inner,
 .burger.active .burger__inner::before,
 .burger.active .burger__inner::after {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .burger__inner,
@@ -184,4 +184,53 @@ body {
   font-family: "Cinzel", serif;
   font-size: 3rem;
   color: #d6c78e;
+}
+
+.nav-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  transition: transform 0.3s;
+  transform: translateX(-102%);
+  z-index: 10;
+}
+.nav-mobile--active {
+  transform: translateX(0);
+}
+.nav-desktop {
+  display: none;
+}
+.nav__item {
+  position: relative;
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em;
+  font-size: 2.3rem;
+  color: #191919;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+.nav__item:hover {
+  color: #d6c78e;
+}
+.nav__item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d6c78e;
+  opacity: 0;
+}
+.nav__item::before:hover::before {
+  animation: pulse 1s;
 }/*# sourceMappingURL=main.css.map */
