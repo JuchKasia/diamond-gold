@@ -1,9 +1,5 @@
 @use './colors' as color;
 @use './animations' as animations;
-@use './small' as small;
-@use './medium' as medium;
-@use './large' as large;
-
 
 *,
 *::before,
@@ -32,6 +28,8 @@ body {
     width: 100%;
 
 }
+
+
 //HEADER
 
 .header {
@@ -272,3 +270,8 @@ body {
         }
     }
 }
+
+
+@import './small';
+@import './medium';
+@import './large';
