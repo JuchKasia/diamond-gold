@@ -35,7 +35,32 @@
         &__card-img {
             width: 50px;
         }
-       
+        &__bg-icon-one {
+            left: 6em;
+            bottom: 8em;
+            width: 10%;
+        }
+        &__bg-icon-two {
+            display: block;
+            top: 10em;
+            left: 35%;
+            width: 5%;
+            animation: rotate-left 55s infinite linear;
+        }
     }
-    
+    .nav {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        padding: 1em;
+        &-desktop {
+            display: block;
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
+        }
+        &__item {
+        color: color.$white;
+        }
+    }
+    .burger {
+        display: none;
+    }
 }
