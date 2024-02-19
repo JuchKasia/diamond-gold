@@ -46,9 +46,21 @@
             left: 35%;
             width: 5%;
             animation: rotate-left 55s infinite linear;
-
         }
-       
     }
-    
+    .nav {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        padding: 1em;
+        &-desktop {
+            display: block;
+            border-bottom: 1px solid rgba(255, 255, 255, .2);
+        }
+        &__item {
+        color: color.$white;
+        }
+    }
+    .burger {
+        display: none;
+    }
 }
