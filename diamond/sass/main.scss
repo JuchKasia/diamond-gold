@@ -264,9 +264,9 @@ body {
             border: 1px solid color.$gold;
             // border-radius: 8px;
             opacity: 0;
-            &:hover::before {
-                animation: pulse 1s;
-            }
+        }
+        &:hover::before {
+            animation: pulse 1s;
         }
     }
 }

@@ -257,7 +257,7 @@ body {
   border: 1px solid #d6c78e;
   opacity: 0;
 }
-.nav__item::before:hover::before {
+.nav__item:hover::before {
   animation: pulse 1s;
 }
 
