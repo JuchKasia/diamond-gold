@@ -247,19 +247,6 @@ body {
 .nav__item:hover {
   color: #d6c78e;
 }
-.nav__item::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  border: 1px solid #d6c78e;
-  opacity: 0;
-}
-.nav__item:hover::before {
-  animation: pulse 1s;
-}
 
 @media (min-width: 992px) {
   .header {
@@ -322,6 +309,19 @@ body {
   }
   .nav__item {
     color: #fff;
+  }
+  .nav__item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d6c78e;
+    opacity: 0;
+  }
+  .nav__item:hover::before {
+    animation: pulse 1s;
   }
   .burger {
     display: none;
