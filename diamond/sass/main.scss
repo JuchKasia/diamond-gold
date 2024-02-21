@@ -277,6 +277,14 @@ body {
 }
 
 
+// FOOTER
+.footer {
+    &__bottom-text {
+        padding: 2em;
+        text-align: center;
+    }
+}
+
 @import './small';
 @import './medium';
 @import './large';

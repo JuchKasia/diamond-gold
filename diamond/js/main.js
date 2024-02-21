@@ -2,6 +2,7 @@ const blur = document.querySelector('.blur');
 const body = document.body;
 const navBtn = document.querySelector('.burger--btn');
 const navMobile = document.querySelector('.nav-mobile')
+const footerYear = document.querySelector('.footer__year');
 
 /* BURGER MENU */
 const openMobileMenu = () => {
@@ -25,3 +26,11 @@ window.addEventListener('resize', () => {
     }
 });
 
+
+// change current year
+const handleCurrentYear = () => {
+    const year = (new Date).getFullYear();
+    footerYear.innerText = year;
+}
+
+handleCurrentYear();

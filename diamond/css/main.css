@@ -267,6 +267,11 @@ body {
   color: #d6c78e;
 }
 
+.footer__bottom-text {
+  padding: 2em;
+  text-align: center;
+}
+
 @media (min-width: 992px) {
   h1.company-name {
     font-size: 6rem;
