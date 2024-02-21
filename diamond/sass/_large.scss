@@ -6,6 +6,7 @@
         grid-template-rows: auto repeat(2, 1fr);
         &__text {
             grid-row: 2 / 4;
+            grid-column: 1 / 2;
         }
         &__text-content {
             font-size: 1.8rem;
@@ -78,5 +79,13 @@
     }
     .burger {
         display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        &__text-content {
+            font-size: 2.2rem;
+        }
     }
 }

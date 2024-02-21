@@ -1,13 +1,18 @@
-const iconBurger = document.querySelector('.burger--btn');
+const navBtn = document.querySelector('.burger--btn');
 const body = document.body;
+const navMobile = document.querySelector('.nav-mobile')
 
 /* BURGER MENU */
-iconBurger.addEventListener('click', () => {
-    iconBurger.classList.toggle('active');
-});
+const openMobileMenu = () => {
+    navBtn.classList.toggle('active');
+    navMobile.classList.toggle('active');
+}
+
+navBtn.addEventListener('click', (openMobileMenu));
+
 
 function closeMenu() {
-    iconBurger.classList.remove('active');
+    navBtn.classList.remove('active');
 }
 
 window.addEventListener('resize', () => {

@@ -135,7 +135,7 @@ body {
 .burger.active .burger__inner,
 .burger.active .burger__inner::before,
 .burger.active .burger__inner::after {
-    background-color: color.$white;
+    background-color: color.$darker;
 }
 
 .burger__inner, 
@@ -234,7 +234,7 @@ body {
         transition: transform .3s;
         transform: translateX(-102%);
         z-index: 10;
-        &--active {
+        &.active {
             transform: translateX(0);
         }
     }
