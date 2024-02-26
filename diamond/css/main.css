@@ -353,11 +353,7 @@ body {
 .info {
   position: relative;
   display: grid;
-  grid-template-areas: "title" "box" "box";
   padding: 6em 2em;
-}
-.info__boxes {
-  grid-area: box;
 }
 .info__box-img {
   width: 100%;

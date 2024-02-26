@@ -367,14 +367,7 @@ body {
 .info {
     position: relative;
     display: grid;
-    grid-template-areas: 
-    "title"
-    "box"
-    "box";
     padding: 6em 2em;
-    &__boxes {
-        grid-area: box;
-    }
     &__box-img {
         width: 100%;
         filter: sepia();
