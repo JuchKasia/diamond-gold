@@ -362,6 +362,49 @@ body {
     }
 }
 
+
+// section INFO
+.info {
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    "title"
+    "box"
+    "box";
+    padding: 6em 2em;
+    &__boxes {
+        grid-area: box;
+    }
+    &__box-img {
+        width: 100%;
+        filter: sepia();
+    }
+    &__box-title {
+        margin: 0.3em 0;
+        font-size: 2.6rem;
+        font-weight: 200;
+        color: color.$gold;
+    }
+    &__box-text {
+        margin-bottom: 0.5em;
+    }
+    &__box-link {
+        display: block;
+        margin-bottom: 2em;
+        font-weight: bold;
+        text-align: right;
+        color: color.$gold;
+        text-decoration: none;
+        transition: color .3s;
+        &:hover {
+            color: color.$darkgold;
+        }
+    }
+    &__bg-icon {
+        display: none;
+    }
+}
+
 // FOOTER
 .footer {
     &__bottom-text {
