@@ -563,6 +563,13 @@ body {
   .newsletter__input {
     margin-bottom: 0;
   }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery__img:nth-child(odd) {
+    display: block;
+  }
 }
 @media (min-width: 992px) {
   .section__title {

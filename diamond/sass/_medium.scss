@@ -48,4 +48,13 @@
             margin-bottom: 0;
         }
     }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        &__img {
+            &:nth-child(odd) {
+                display: block;
+            }
+        }
+    }
 }
