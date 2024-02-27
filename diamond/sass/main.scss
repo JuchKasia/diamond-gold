@@ -28,9 +28,30 @@ body {
 
 .container {
     margin: 0 auto;
+    padding: 0 20px;
     max-width: 1200px;
     width: 100%;
+}
 
+.section__title {
+    position: relative;
+    margin: 0 auto 2em;
+    width: fit-content;
+    font-size: 3.2rem;
+    font-weight: 200;
+    color: color.$gold;
+    &::before {
+        position: absolute;
+        bottom: -.1em;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        content: '';
+        background-color: color.$gold;
+    }
+    span {
+        font-weight: 900;
+    }
 }
 
 /* Blur */
@@ -338,6 +359,49 @@ body {
     &__card-three {
         grid-row: 3 / 4;
         grid-column: 1 / -1;
+    }
+}
+
+
+// section INFO
+.info {
+    position: relative;
+    display: grid;
+    // grid-template-areas:
+    //     "title title title"
+    //     "box box box"
+    //     "box box box";
+    padding: 6em 2em;
+    &__box-img {
+        width: 100%;
+        filter: sepia();
+    }
+    &__box-title {
+        margin: 0.3em 0;
+        padding: 0 0.3em;
+        font-size: 2.6rem;
+        font-weight: 200;
+        color: color.$gold;
+    }
+    &__box-text {
+        margin-bottom: 0.5em;
+        padding: 0 0.3em;
+    }
+    &__box-link {
+        display: block;
+        margin-bottom: 2em;
+        padding-right: 0.5em;
+        font-weight: bold;
+        text-align: right;
+        color: color.$gold;
+        text-decoration: none;
+        transition: color .3s;
+        &:hover {
+            color: color.$darkgold;
+        }
+    }
+    &__bg-icon {
+        display: none;
     }
 }
 

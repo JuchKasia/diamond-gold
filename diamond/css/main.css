@@ -50,8 +50,31 @@ body {
 
 .container {
   margin: 0 auto;
+  padding: 0 20px;
   max-width: 1200px;
   width: 100%;
+}
+
+.section__title {
+  position: relative;
+  margin: 0 auto 2em;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3.2rem;
+  font-weight: 200;
+  color: #d6c78e;
+}
+.section__title::before {
+  position: absolute;
+  bottom: -0.1em;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  content: "";
+  background-color: #d6c78e;
+}
+.section__title span {
+  font-weight: 900;
 }
 
 /* Blur */
@@ -327,11 +350,93 @@ body {
   grid-column: 1/-1;
 }
 
+.info {
+  position: relative;
+  display: grid;
+  padding: 6em 2em;
+}
+.info__box-img {
+  width: 100%;
+  filter: sepia();
+}
+.info__box-title {
+  margin: 0.3em 0;
+  padding: 0 0.3em;
+  font-size: 2.6rem;
+  font-weight: 200;
+  color: #d6c78e;
+}
+.info__box-text {
+  margin-bottom: 0.5em;
+  padding: 0 0.3em;
+}
+.info__box-link {
+  display: block;
+  margin-bottom: 2em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  text-align: right;
+  color: #d6c78e;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.info__box-link:hover {
+  color: #9b9165;
+}
+.info__bg-icon {
+  display: none;
+}
+
 .footer__bottom-text {
   padding: 2em;
   text-align: center;
 }
 
+@media (min-width: 576px) {
+  .info {
+    padding: 10em 2em;
+  }
+  .info__title {
+    border: 1px solid blue;
+    padding: 0 1em;
+  }
+  .info__box {
+    display: grid;
+    justify-content: end;
+  }
+  .info__box-img, .info__box-text {
+    max-width: 500px;
+  }
+  .info__bg-icon {
+    position: absolute;
+    display: block;
+    opacity: 0.05;
+    z-index: -5;
+  }
+  .info__bg-icon--one {
+    top: 14%;
+    width: 20%;
+    animation: rotate-right 160s infinite linear;
+  }
+  .info__bg-icon--two {
+    bottom: 10%;
+    left: 10%;
+    width: 25%;
+    animation: rotate-left 140s infinite linear;
+  }
+  .info__bg-icon--three {
+    top: 26%;
+    left: 16%;
+    width: 40%;
+    animation: rotate-left 160s infinite linear;
+  }
+  .info__bg-icon--four {
+    top: 55%;
+    left: 10%;
+    width: 15%;
+    animation: rotate-right 140s infinite linear;
+  }
+}
 @media (min-width: 768px) {
   .cards__box {
     padding: 10em 2em;
@@ -350,6 +455,12 @@ body {
   }
 }
 @media (min-width: 992px) {
+  .section__title {
+    font-size: 4.8rem;
+  }
+  .section__title::before {
+    height: 4px;
+  }
   h1.company-name {
     font-size: 6rem;
   }
