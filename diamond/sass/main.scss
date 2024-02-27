@@ -439,6 +439,44 @@ body {
 }
 
 
+// section NEWSLETTER
+.newsletter {
+    padding: 8em 0.2em;
+    background-color: color.$red;
+    text-align: center;
+    &__text {
+        margin-bottom: 1em;
+        padding: 1em;
+        font-size: 4rem;
+        font-weight: 200;
+    }
+    &__input {
+        margin-bottom: 1em;
+        padding: 1em;
+        width: 100%;
+        background-color: color.$white;
+        border: 1px solid transparent;
+        border-radius: 5px;
+    }
+    &__btn {
+        // margin-bottom: 1em;
+        padding: 1em;
+        font-weight: bold;
+        color: color.$gold;
+        border: 1px solid color.$gold;
+        border-radius: 8px;
+        background: none;
+        cursor: pointer;
+        transition: background-color .3s, color .3s;
+        &:hover {
+            color: color.$red;;
+            background-color: color.$gold;
+        }
+    }
+}
+
+
+
 // FOOTER
 .footer {
     &__bottom-text {
