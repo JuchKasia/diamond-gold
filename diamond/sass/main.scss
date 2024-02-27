@@ -473,6 +473,21 @@ body {
 }
 
 
+// section GALLERY
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        &:nth-child(odd) {
+            display: none;
+        }
+    }
+}
+
+
 
 // FOOTER
 .footer {

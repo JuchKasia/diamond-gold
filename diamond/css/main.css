@@ -450,6 +450,20 @@ body {
   background-color: #d6c78e;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.gallery__img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery__img:nth-child(odd) {
+  display: none;
+}
+
 .footer__bottom-text {
   padding: 2em;
   text-align: center;
