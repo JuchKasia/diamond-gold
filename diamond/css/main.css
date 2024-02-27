@@ -531,6 +531,27 @@ body {
   .plans__item-name {
     margin-bottom: 0;
   }
+  .newsletter-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .newsletter__text {
+    margin-bottom: 0;
+  }
+  .newsletter__form {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+  }
+  .newsletter__input {
+    margin-bottom: 0;
+    padding: 1em;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+  }
 }
 @media (min-width: 992px) {
   .section__title {
