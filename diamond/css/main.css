@@ -483,6 +483,20 @@ body {
     grid-row: 1/2;
     grid-column: 7/10;
   }
+  .plans {
+    padding: 8em 2em;
+  }
+  .plans__box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+  }
+  .plans__item {
+    margin: 0 1em;
+  }
+  .plans__item-name {
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 992px) {
   .section__title {
