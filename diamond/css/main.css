@@ -435,14 +435,12 @@ body {
   width: 100%;
   background-color: #fff;
   border: 1px solid transparent;
-  border-radius: 5px;
 }
 .newsletter__btn {
   padding: 1em;
   font-weight: bold;
   color: #d6c78e;
   border: 1px solid #d6c78e;
-  border-radius: 8px;
   background: none;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
@@ -546,11 +544,6 @@ body {
   }
   .newsletter__input {
     margin-bottom: 0;
-    padding: 1em;
-    width: 100%;
-    background-color: #fff;
-    border: 1px solid transparent;
-    border-radius: 5px;
   }
 }
 @media (min-width: 992px) {
